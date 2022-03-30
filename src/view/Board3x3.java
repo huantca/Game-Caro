@@ -67,7 +67,7 @@ public class Board3x3 extends JPanel{
                                 
                                 coordinates.setValue(currentPlayer);
                                 repaint();
-                                int result = win3x3.win(i, j);
+                                int result = win3x3.win(currentPlayer);
                                 
                                 if (endGame !=null) {
                                     endGame.end(currentPlayer, result);

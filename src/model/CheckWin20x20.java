@@ -72,6 +72,11 @@ public int win( int i, int j){
     TopI = i - min;
     TopJ = j + min;
     count = 0;
+    if (i > 10 && j<8) {
+        int max = Math.max(i, j);
+        TopI = i - max;
+        TopJ= j + max;
+    }
 
     if(TopJ >= M){
         int du = TopJ - (M - 1);
