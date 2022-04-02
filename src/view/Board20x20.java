@@ -120,12 +120,17 @@ public class Board20x20 extends JPanel {
                 coordinates.setW(30);
                 coordinates.setH(30);
 
-                Color color = cl % 2 == 0 ? Color.white: Color.gray; 
-                g.setColor(color);
+                //Color color = cl % 2 == 0 ? Color.white: Color.gray; 
+                //g.setColor(color);
+                g.setColor(Color.LIGHT_GRAY);
                 g.fillRect(x, y, 30, 30);
-
+               
+                g.setColor(new Color(0xF2F2F2));
+                g.fillRect(x + 1, y + 1, 28, 28);
+                
+                // g.drawLine(x, y, 30, 30);
                 if (coordinates.getValue().equals(Coordinates.X_VALUE)) {
-                    BufferedImage img =  imgX ;
+                    BufferedImage img =  imgX;
                     g.drawImage(img, x, y , 30, 30, this);
                 }else if(coordinates.getValue().equals(Coordinates.O_VALUE)){
                     BufferedImage img =  imgO ;
