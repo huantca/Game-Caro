@@ -107,7 +107,6 @@ public class Board20x20 extends JPanel {
     @Override
     public void paint(Graphics g) {
         //super.paint(g);
-        int cl = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < M; j++) {
                 int x = j * 30;
@@ -120,15 +119,14 @@ public class Board20x20 extends JPanel {
                 coordinates.setW(30);
                 coordinates.setH(30);
 
-                //Color color = cl % 2 == 0 ? Color.white: Color.gray; 
-                //g.setColor(color);
+                
                 g.setColor(Color.LIGHT_GRAY);
                 g.fillRect(x, y, 30, 30);
                
                 g.setColor(new Color(0xF2F2F2));
                 g.fillRect(x + 1, y + 1, 28, 28);
                 
-                // g.drawLine(x, y, 30, 30);
+                
                 if (coordinates.getValue().equals(Coordinates.X_VALUE)) {
                     BufferedImage img =  imgX;
                     g.drawImage(img, x, y , 30, 30, this);
@@ -137,9 +135,8 @@ public class Board20x20 extends JPanel {
                     g.drawImage(img, x, y , 30, 30, this);
                 }
                 
-                cl++;
             }
-            cl++;
+            
         }
     
         
